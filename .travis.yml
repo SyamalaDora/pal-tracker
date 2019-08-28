@@ -11,7 +11,7 @@ jobs:
   include:
     - stage: build and publish
       language: java
-      jdk: openjdk8
+      jdk: openjdk11
       install: skip
       before_script: chmod +x gradlew
       script: ./gradlew clean build
