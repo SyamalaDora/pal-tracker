@@ -18,7 +18,7 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository{
 
           return entry;
     }
-    public TimeEntry find(long id)
+    public TimeEntry find(Long id)
     {
         TimeEntry responseEntry=storedMap.get(id);
         return responseEntry;
@@ -33,13 +33,13 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository{
         return  timeEntryList;
     }
 
-    public TimeEntry update (long id, TimeEntry timeEntry)
+    public TimeEntry update (Long id, TimeEntry timeEntry)
     {
         timeEntry.setId(id);
          storedMap.replace(id,timeEntry);
         return storedMap.get(id);
     }
-    public void delete (long id)
+    public void delete (Long id)
     {
         TimeEntry entry=storedMap.get(id);
         if(entry!=null)
