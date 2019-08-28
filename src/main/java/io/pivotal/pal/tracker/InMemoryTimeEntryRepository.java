@@ -1,6 +1,5 @@
 package io.pivotal.pal.tracker;
 
-import sun.awt.SunHints;
 
 import java.util.*;
 
